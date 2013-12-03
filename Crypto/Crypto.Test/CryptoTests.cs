@@ -11,36 +11,53 @@ namespace Crypto.Test
 	public class CryptoTests
 	{
 		string pubkey = @"-----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDV5IxvBBXha3vpbLv60ZoBFwG
-gwaRhI9vnD+MbBBplFPDkHBQyNF0KoPQCUaEDp9EAzvpKU7BFbJcl+ktbqDJNiZi
-gdIgl/CuAUcnBWdqZc0hR7lxNa945xK0nhqtRulQq0Ie4Q+D8vFgtw2sR9Pebw1O
-CZ3Lg9eXWwyLZcRnqwIDAQAB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwKzGUWdKLak1O1rgG6Kd
+6A5e1zOwROhqEIOLxDVSs8Ojf9jUh8agx8YStXwa01divsWgnOHBgYJomnKZY6Mq
+hYfzd+dvsHqzcEslsB8Q+lnCUPh6WrpKP8GFARn5XCzEC8mji1me2Fmun5w6zKcf
+m4+cNSevbssE18vG1ngJu7coaQ56dqhz2LugHURKEJxcQWgR2uj9FyZRsFVWofz3
+NeEunQGWOdC+S44mU7MAhR+BGFqLj0T1Uroc3UKq3zsK9D87lqVKvoLsiFlklML1
+PCDNIiB5kH2XGUBEn3lmeESHIwTVu+/eBZJUm+9zrpkSHeWou99E6VZUffikP896
+CQIDAQAB
 -----END PUBLIC KEY-----";
 		string privkey = @"-----BEGIN RSA PRIVATE KEY-----
-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
+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
 -----END RSA PRIVATE KEY-----";
+
+		string data = @"0.f,e.8,12.2;0.1:TlM=.2:WFk=.4:bnM=.8:cHdz.10:MTIzNDU=.20:GVzdEBlbWFpbC5jb20=,e.8:dGVzdFZhbHVl;3000-06-30T18:38:36.480Z";
+		string sig = "ZXwVqjzrMJ7zx1U3Iy4HKgqcelYNXxALwLghS9iozwdmLQGAa4n1dk2ZcAUrox8T8x8nulHXlot9HUZYE5OrmVITDf1iMUdKcY63LB9cYf3zJlNleDvyF02vFpssGjoUhL6IEM5mZWgseGpvzozKLYR00CDwP+gR85WFhFen51NV6ua4OMYDD5eSE9pA+cBD8gox106V6V6nQHtL844P0EeBNiM0z2xTnUPD8wwD4t7PH09Q5We7N3YMoeG+fGmAUymShoOOHCDzUFWORJPrtVZiTmolDpbPsM0X5G5P8VNzyxHUGydvumcolLrVQnbSNW0jNyBIfBQ81rllp1mXOQ==";
 
 		[TestMethod]
 		public void SignAndVerifyTest()
 		{
-			var testdata = "test";
 			var signer = new Signer(privkey, true);
-			string sig = signer.Sign(testdata);
-
+			string newsig = signer.Sign(data);
+			Assert.AreEqual(sig, newsig);
 			var verifier = new Verifier(pubkey, false);
-			Assert.IsTrue(verifier.Verify(testdata, sig));
+			Assert.IsTrue(verifier.Verify(data, sig));
 		}
 	}
 }
