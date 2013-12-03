@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<version>1.0.1</version>
+		<title>$title$</title>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>$description$</description>
+		<copyright>Copyright 2013</copyright>
+		<references>
+			<reference file="$id$.dll" />
+		</references>
+	</metadata>
+	<files>
+		<file src="bin\Release\CodeContracts\*.dll" target="lib\net45" />
+	</files>
+</package>
